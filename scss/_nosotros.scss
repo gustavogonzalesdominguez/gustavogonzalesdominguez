@@ -1,0 +1,56 @@
+.imagenNosotros{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.nosotros{
+    background-color: cadetblue;
+        .nosotros__title{
+            font-size: 2rem;
+            color: black;
+            padding: 0px 20px;
+        }
+}
+
+.contenedorNosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+$animal:gato;
+
+.nosotros{
+  @if $animal == gato {
+      color: black;
+      
+  }@else if $animal == perro {
+        color: red;
+  }@else if $animal == caballo {
+           color: green;
+
+  }@else {
+      color:grey
+  }
+}
+
+@for $i from 1 through 3 {
+    .texto-#{$i} {
+        width: 20em * $i;
+        background-color: fuchsia;
+        border: solid 1px black;
+        color: fuchsia;
+    }
+    
+}
+
+.grilla{
+    display: flex;
+    justify-content: center;
+    
+}
